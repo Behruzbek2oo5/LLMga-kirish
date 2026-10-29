@@ -29,8 +29,8 @@ Windows'da virtual muhitni faollashtirish buyrug'i: `.venv\\Scripts\\activate`.
 `Modelfile` asosida model yaratish va ishga tushirish:
 
 ```bash
-ollama create gemma3:4b-latest -f 1/Modelfile
-ollama run gemma3:4b-latest
+ollama create qwen2.5:7b-latest -f 1/Modelfile
+ollama run qwen2.5:7b-latest
 ```
 
 `num_ctx` qiymati `Modelfile`da hozir `4096`. `8192` yoki `16384` bilan tajriba qilish uchun qiymatni o'zgartirib, `ollama create` buyrug'ini qayta bajaring. System promptni `SYSTEM` direktivasi orqali shu faylda belgilang.
@@ -41,7 +41,7 @@ API misoli:
 python 1/first_api.py
 ```
 
-Ushbu misolda `first_api.py` ichidagi model nomi Ollama'da mavjud bo'lishi kerak. Fayl hozir `gemma3-8k` modelini so'raydi; model nomingiz boshqacha bo'lsa, shu qiymatni o'zgartiring. Javob bilan birga `prompt_eval_count` va `eval_count` chiqariladi.
+Ushbu misolda `first_api.py` ichidagi model nomi Ollama'da mavjud bo'lishi kerak. Fayl hozir `qwen2.5:7b` modelini so'raydi; model nomingiz boshqacha bo'lsa, shu qiymatni o'zgartiring. Javob bilan birga `prompt_eval_count` va `eval_count` chiqariladi.
 
 ## 2-topshiriq: ob-havo API va MCP
 
