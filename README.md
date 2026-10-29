@@ -26,14 +26,15 @@ Windows'da virtual muhitni faollashtirish buyrug'i: `.venv\\Scripts\\activate`.
 
 ## 1-topshiriq: Ollama asoslari
 
-`Modelfile` asosida model yaratish va ishga tushirish:
+`1-topshiriq/Modelfile` asosiy `qwen2.5:7b` modelidan `4096` tokenlik context oynasi va o'zbekcha system prompt bilan yangi `qwen2.5:7b-4k` modelini yaratadi. Loyiha ildiz papkasida quyidagi buyruqlarni bajaring:
 
 ```bash
-ollama create qwen2.5:7b-latest -f 1-topshiriq/Modelfile
-ollama run qwen2.5:7b-latest
+ollama pull qwen2.5:7b
+ollama create qwen2.5:7b-4k -f 1-topshiriq/Modelfile
+ollama run qwen2.5:7b-4k
 ```
 
-`num_ctx` qiymati `Modelfile`da hozir `4096`. `8192` yoki `16384` bilan tajriba qilish uchun qiymatni o'zgartirib, `ollama create` buyrug'ini qayta bajaring. System promptni `SYSTEM` direktivasi orqali shu faylda belgilang.
+`ollama pull` asosiy model kompyuterda bo'lmasa yuklab oladi. `num_ctx` qiymatini `8192` yoki `16384` qilib o'zgartirsangiz, `ollama create` buyrug'ini qayta bajarib modelni yangilang. System prompt `SYSTEM` direktivasida belgilanadi. Yaratilgan model ro'yxatini `ollama list` bilan ko'rishingiz mumkin.
 
 API misoli:
 
