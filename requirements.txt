@@ -1,0 +1,5 @@
+fastapi
+httpx
+mcp
+pydantic
+uvicorn[standard]
