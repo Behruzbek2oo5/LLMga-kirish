@@ -2,7 +2,7 @@
 
 Loyiha ikki topshiriq bo'yicha ajratilgan:
 
-- `1/`: Ollama modeli, Modelfile, context window, API call va token hisoboti.
+- `1-topshiriq/`: Ollama modeli, Modelfile, context window, API call va token hisoboti.
 - `2-ob-havo-mcp-api/`: FastAPI ob-havo prototipi, Ollama orqali so'rovni tuzilmaga aylantirish va MCP tool.
 
 ## Talablar
@@ -29,7 +29,7 @@ Windows'da virtual muhitni faollashtirish buyrug'i: `.venv\\Scripts\\activate`.
 `Modelfile` asosida model yaratish va ishga tushirish:
 
 ```bash
-ollama create qwen2.5:7b-latest -f 1/Modelfile
+ollama create qwen2.5:7b-latest -f 1-topshiriq/Modelfile
 ollama run qwen2.5:7b-latest
 ```
 
@@ -38,7 +38,7 @@ ollama run qwen2.5:7b-latest
 API misoli:
 
 ```bash
-python 1/first_api.py
+python 1-topshiriq/first_api.py
 ```
 
 Ushbu misolda `first_api.py` ichidagi model nomi Ollama'da mavjud bo'lishi kerak. Fayl hozir `qwen2.5:7b` modelini so'raydi; model nomingiz boshqacha bo'lsa, shu qiymatni o'zgartiring. Javob bilan birga `prompt_eval_count` va `eval_count` chiqariladi.
